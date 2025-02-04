@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Caption Generator</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 20px;
+        }
+        form {
+            margin: 20px;
+        }
+        img {
+            max-width: 400px;
+            margin: 20px;
+        }
+        .caption {
+            font-size: 20px;
+            font-weight: bold;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Upload an Image</h2>
+    <form action="/" method="POST" enctype="multipart/form-data">
+        <input type="file" name="file" required>
+        <button type="submit">Generate Caption</button>
+    </form>
+
+    {% if image %}
+        <img src="{{ image }}" alt="Uploaded Image">
+        <p class="caption">Caption: {{ caption }}</p>
+    {% endif %}
+
+</body>
+</html>

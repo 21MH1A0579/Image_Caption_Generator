@@ -1,0 +1,10 @@
+{
+    "explorer.excludeGitIgnore": false,
+    "git.ignoredRepositories": [
+        "/Images",
+        "/static"
+    ],
+    "files.exclude": {
+        "**/Images": true
+    }
+}
